@@ -1,0 +1,10 @@
+﻿<Router AppAssembly="@typeof(MudBlazor.MayBeEssentials.Doc.Client.Program).Assembly">
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MudBlazor.MayBeEssentials.Doc.Client.Shared.MainLayout)" />
+    </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(MudBlazor.MayBeEssentials.Doc.Client.Shared.MainLayout)">
+            <p>Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
