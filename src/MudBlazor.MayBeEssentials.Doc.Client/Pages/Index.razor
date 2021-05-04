@@ -1,4 +1,6 @@
 ﻿@page "/"
+@namespace MayBeEssentials.Doc.Client
+
 <MudContainer>
         <MudGrid>
             <MudItem xs="12">
@@ -20,5 +22,11 @@
                     <MudButton Variant="Variant.Filled" Color="Color.Primary" Size="Size.Large" Link="https://github.com/Ulf-Ason/MudBlazor.MayBeEssentials/branches" Target="_blank">GitHub</MudButton>
                 </div>
             </MudItem>
-        </MudGrid>
+            <MudItem xs="12">
+                <MayBeEssentials.MudChipSet MultiSelection="true" Filter="true" TriStateSelection="true">
+                    <MayBeEssentials.MudChip Text="Milk" Default="true"></MayBeEssentials.MudChip>
+                    <MayBeEssentials.MudChip Text="Eggs" Icon="@Icons.Material.Filled.Dangerous"></MayBeEssentials.MudChip>
+                </MayBeEssentials.MudChipSet>
+</MudItem>
+</MudGrid>
 </MudContainer>

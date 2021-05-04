@@ -1,0 +1,34 @@
+﻿@namespace MayBeEssentials
+@inherits MudComponentBase
+@using MudBlazor
+
+<div class="@Classname" style="@Style" @onclick="@OnClickHandler">
+    @if (!String.IsNullOrEmpty(Avatar))
+    {
+<MudAvatar Class="@AvatarClass" Color="@Color">
+    <MudIcon Icon="@Avatar" />
+</MudAvatar> }
+            else if (!String.IsNullOrEmpty(Icon) && !IsChecked)
+            {
+<MudIcon Icon="@Icon" Class="mud-chip-icon" Size="Size.Small" Color="@IconColor" /> }
+            else if (IsChecked)
+            {
+                if (!IsCrossChecked)
+                {
+<MudIcon Icon="@Icons.Material.Filled.Check" Class="mud-chip-icon" Size="Size.Small" /> }
+                else
+                {
+<MudIcon Icon="@Icons.Material.Filled.Clear" Class="mud-chip-icon" Size="Size.Small" />}
+            }
+    <span class="mud-chip-content">
+        @if (ChildContent == null)
+        {
+@Text }
+            else
+            {
+@ChildContent}
+        @if (OnClose.HasDelegate || ChipSet?.AllClosable == true)
+        {
+<MudIconButton Class="mud-chip-close-button" Icon="@(String.IsNullOrEmpty(CloseIcon) ? $"{Icons.Material.Filled.Cancel}" : $"{CloseIcon}")" OnClick="OnCloseHandler" Size="Size.Small" />}
+    </span>
+</div>

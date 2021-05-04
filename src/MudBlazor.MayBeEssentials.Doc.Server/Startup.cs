@@ -53,7 +53,7 @@ namespace MudBlazor.MayBeEssentials.Doc.Server
                 wasm.UseRouting();
                 wasm.UseEndpoints(endpoints =>
                 {
-                    endpoints.MapControllers();
+                    //endpoints.MapControllers(); // Probably not used in wasm
                     endpoints.MapFallbackToFile("wasm/{*path:nonfile}", "wasm/index.html");
                 });
             });
