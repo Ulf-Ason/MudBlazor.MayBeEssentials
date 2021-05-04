@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MudBlazor.MayBeEssentials.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MudBlazor.MayBeEssentials.Doc.Server", "MudBlazor.MayBeEssentials.Doc.Server\MudBlazor.MayBeEssentials.Doc.Server.csproj", "{21B944D9-3C98-4769-ADCC-402570A9D1A1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget-packages", "Nuget-packages", "{D419B1D1-7A51-4E1F-B43E-92BE510537CE}"
+	ProjectSection(SolutionItems) = preProject
+		MudBlazor.MayBeEssentials.1.0.0.nupkg = MudBlazor.MayBeEssentials.1.0.0.nupkg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
